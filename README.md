@@ -14,3 +14,5 @@ Use images with and without faces on them. Once you have your images, run the ``
 python resize_images.py --width=<width> --height=<height>
 ```
 The resized images will be stored in the ```data/images_resized``` folder.
+
+The next step is to label those images. For that follow the tutorial mentioned above 

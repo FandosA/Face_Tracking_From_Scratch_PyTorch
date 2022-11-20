@@ -17,7 +17,7 @@ if __name__ == "__main__":
     
     p = configargparse.ArgumentParser()
     p.add_argument('--width', type=int, default=640, help='Width of the resized output image')
-    p.add_argument('--height', type=int, default=480, help='Width of the resized output image')
+    p.add_argument('--height', type=int, default=360, help='Width of the resized output image')
     opt = p.parse_args()
     
     images_path = os.path.join('data', 'images')

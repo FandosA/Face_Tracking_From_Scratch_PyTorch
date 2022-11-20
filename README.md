@@ -15,4 +15,4 @@ python resize_images.py --width=<width> --height=<height>
 ```
 The resized images will be stored in the ```data/images_resized``` folder.
 
-The next step is to label those images. For that follow the tutorial mentioned above 
+The next step is to label those images. For that, the tool _Labelme_ will be used. Follow the tutorial mentioned above starting at 20:05 to label the images.

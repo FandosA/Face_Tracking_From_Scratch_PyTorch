@@ -20,4 +20,4 @@ The next step is to label those images. For that, the tool _Labelme_ will be use
 If the labeling process was successful, running ```visualize_dataset.py``` should display the dataset with the rectangles around the faces in the images.
 
 ## Data augmentation
-The next step is to perform a data augmentation. For that, just run the ```data_augmentation.py```script. For each image, one hundred images will be created, taken as subimages of the original image, changing properties such as rotation, orientation, color... 
+The next step is to perform a data augmentation. For that, just run the ```data_augmentation.py```script. For each image, one hundred images will be created, taken as subimages of the original image, changing properties such as rotation, orientation, color... Also the labels for those new images will be automatically created, and everything will be stored in the ```aug_data/``` folder.

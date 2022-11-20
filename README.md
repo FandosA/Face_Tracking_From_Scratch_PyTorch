@@ -15,4 +15,6 @@ python resize_images.py --width=<width> --height=<height>
 ```
 The resized images will be stored in the ```data/images_resized``` folder.
 
-The next step is to label those images. For that, the tool _Labelme_ will be used. Follow the tutorial mentioned above, starting at 20:05, to install the tool and label the images. Just note that when you click the _Open Dir_ option in the tool, the input directory in our case is ```data/images_resized```, and the output directory is ```data/labels```.
+The next step is to label those images. For that, the tool _Labelme_ will be used. Follow the tutorial mentioned above, starting at 20:05, to install the tool and label the images. Just note that when you click the _Open Dir_ option in the tool, the input directory in our case is ```data/images_resized```, and the output directory for the labels is ```data/labels```.
+
+If the labeling process was successful, running ```visualize_dataset.py``` should display the dataset with the rectangles around the faces in the images.

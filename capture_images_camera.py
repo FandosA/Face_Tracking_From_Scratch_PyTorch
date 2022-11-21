@@ -18,7 +18,7 @@ import configargparse
 if __name__ == "__main__":
     
     p = configargparse.ArgumentParser()
-    p.add_argument('--images_to_take', type=int, default=90, help='Number of images to take from the camera')
+    p.add_argument('--images_to_take', type=int, default=100, help='Number of images to take from the camera')
     opt = p.parse_args()
     
     cap = cv2.VideoCapture(0)

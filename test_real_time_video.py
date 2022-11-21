@@ -69,6 +69,7 @@ if __name__ == "__main__":
         bbox_coords_pred, label_pred = model(image_tensor)
         
         if label_pred.item() > opt.accuracy:
+            
             coords[0] = bbox_coords_pred[0][0].item()
             coords[1] = bbox_coords_pred[0][1].item()
             coords[2] = bbox_coords_pred[0][2].item()
@@ -76,7 +77,8 @@ if __name__ == "__main__":
             
             cv2.putText(frame, 'Face',
                         tuple(np.multiply(np.array(coords[:2]), [frame.shape[1], frame.shape[0]]).astype(int)),
-                        cv2.FONT_HERSHEY_PLAIN, 3, (0, 0, 255), 2)
+                        cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255), 2)
+            
             cv2.rectangle(img=frame,
                           pt1=tuple(np.multiply(np.array(coords[:2]), [frame.shape[1], frame.shape[0]]).astype(int)),
                           pt2=tuple(np.multiply(np.array(coords[2:]), [frame.shape[1], frame.shape[0]]).astype(int)),

@@ -67,13 +67,13 @@ if __name__ == "__main__":
         image_tensor = torch.unsqueeze(image_tensor, dim=0)
         
         bbox_coords_pred, label_pred = model(image_tensor)
-        
-        coords[0] = bbox_coords_pred[0][0].item()
-        coords[1] = bbox_coords_pred[0][1].item()
-        coords[2] = bbox_coords_pred[0][2].item()
-        coords[3] = bbox_coords_pred[0][3].item()
             
         if label_pred.item() > opt.accuracy:
+        
+            coords[0] = bbox_coords_pred[0][0].item()
+            coords[1] = bbox_coords_pred[0][1].item()
+            coords[2] = bbox_coords_pred[0][2].item()
+            coords[3] = bbox_coords_pred[0][3].item()
             
             cv2.putText(frame, 'Face',
                         tuple(np.multiply(np.array(coords[:2]), [frame.shape[1], frame.shape[0]]).astype(int)),

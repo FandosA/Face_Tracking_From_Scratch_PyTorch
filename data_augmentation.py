@@ -75,7 +75,7 @@ if __name__ == "__main__":
                 coords[2] = x0
                 coords[3] = y0
               
-            coords = list(np.divide(coords, [640, 360, 640, 360]))
+            coords = list(np.divide(coords, [img.shape[1], img.shape[0], img.shape[1], img.shape[0]]))
             
         try:
             

@@ -20,4 +20,8 @@ The next step is to label those images. For that, the tool _Labelme_ will be use
 If the labeling process was successful, running ```visualize_dataset.py``` should display the dataset with the rectangles around the faces in the images.
 
 ## Data augmentation
-The next step is to perform a data augmentation. For that, just run the ```data_augmentation.py```script. For each image, one hundred images will be created, taken as subimages of the original image, changing properties such as rotation, orientation, color... Also the labels for those new images will be automatically created, and everything will be stored in the ```aug_data/``` folder. To check that the data augmentation has been succesful, run the ```visualize_augmented_dataset.py``` and the new images will be shown with the rectangles around the faces.
+To do the data augmentation, just run the ```data_augmentation.py``` script. For each image, using the library _albumentations_, one hundred images will be created taking subimages from the original image changing properties such as rotation, orientation, color, brightness... The resolution of these new images, i.e. their size, is set by deafutlt to 256x144. It can be changed by running the following command, but keep in mind that if this size is modified, the neural network and test files will also have to be modified, so it is not recommended.
+```
+python data_augmentation.py --width=<width> --height=<height>
+```
+Also the labels for those new images will be automatically created, and everything will be stored in the ```aug_data/``` folder. To check that the data augmentation has been succesful, run the ```visualize_augmented_dataset.py``` and the new images will be shown with the rectangles around the faces.

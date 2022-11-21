@@ -14,9 +14,6 @@ if __name__ == "__main__":
 
     os.mkdir('data')
     os.mkdir('data/images')
-    os.mkdir('data/images/face')
-    os.mkdir('data/images/noface')
-    
     os.mkdir('data/images_resized')
     os.mkdir('data/labels')
     

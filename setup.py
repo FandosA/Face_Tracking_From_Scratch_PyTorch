@@ -13,10 +13,10 @@ import os
 if __name__ == "__main__":
 
     os.mkdir('data')
-    os.mkdir('data/images')
-    os.mkdir('data/images_resized')
-    os.mkdir('data/labels')
+    os.mkdir(os.path.join('data', 'images'))
+    os.mkdir(os.path.join('data', 'images_resized'))
+    os.mkdir(os.path.join('data', 'labels'))
     
     os.mkdir('aug_data')
-    os.mkdir('aug_data/images')
-    os.mkdir('aug_data/labels')
+    os.mkdir(os.path.join('aug_data', 'images'))
+    os.mkdir(os.path.join('aug_data', 'labels'))

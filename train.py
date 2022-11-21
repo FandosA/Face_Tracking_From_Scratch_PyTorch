@@ -226,7 +226,6 @@ if __name__ == "__main__":
     print('Images used to train: ' + str(len(train_dataset)) + '/' + str(len(dataset)))
     print('Images used to validate: ' + str(len(validate_dataset)) + '/' + str(len(dataset)) + '\n')
     
-    #utils.visualize_dataset(train_dataset)
     model = VGG16(in_channels=train_dataset[0][0].size(dim=0),
                   out_channels_bbox=train_dataset[0][1].size(dim=0),
                   out_channels_label=train_dataset[0][2].size(dim=0)).to(device)

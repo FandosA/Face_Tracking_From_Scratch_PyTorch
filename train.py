@@ -191,7 +191,7 @@ if __name__ == "__main__":
     p.add_argument('--log_dir', type=str, default='face_tracking_model', help='Name of the folder to save the model.')
     p.add_argument('--batch_size', type=int, default=8, help='Batch size.')
     p.add_argument('--learning_rate', type=float, default=1e-4, help='Learning rate.')
-    p.add_argument('--epochs', type=int, default=100, help='Number of epochs.')
+    p.add_argument('--epochs', type=int, default=50, help='Number of epochs.')
     p.add_argument('--device', type=str, default='gpu', help='Choose the device to train the model: "gpu" or "cpu"')
     opt = p.parse_args()
     

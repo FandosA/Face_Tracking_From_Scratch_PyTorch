@@ -39,3 +39,6 @@ To train the model, the convolutional neural network VGG16 has been used. If you
 As an example, I uploaded the folder where the checkpoints of the model I trained were stored, as well as the loss and accuracy values along with their plots.
 
 **IMPORTANT**: the files inside the ```checkpoints/``` folder are not actual checkpoints. They are empty files created to show the appearance of the folder that will be created when starting the training. On the other hand, the plot and the accuracy and loss values are the actual results that I got from training my model.
+
+## Test the model
+Finally, you can test the model by running any of the test files: ``````

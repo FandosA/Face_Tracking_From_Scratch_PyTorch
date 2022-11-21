@@ -25,3 +25,9 @@ To do the data augmentation, just run the ```data_augmentation.py``` script. For
 python data_augmentation.py --width=<width> --height=<height> --num_subimages=<number of subimages>
 ```
 The labels for those new images will be created automatically, setting the label to 1 or 0 depending on whether there is a face in the images or not, respectively, and converting the coordinates of the bounding boxes to the corresponding values. Images will be stored in the ```aug_data/images``` folder and labels will be stored in the ```aug_data/labels``` folder. To check that the data augmentation has been succesful, running ```visualize_augmented_dataset.py``` should display the new images with the bounding boxes around the faces.
+
+## Train the model
+To train the model, the convolutional neural network VGG16 has been used. If you followed the steps correctly, it should be enough to run the ```train.py``` script to start the training. The hyperparameters can be modified both setting them in the script or running the following command:
+´´´
+python train.py --dataset_path=<path to the dataset> --train_split=<percentage of the dataset to use for training> --log_dir=<directory to store checkpoints> --
+´´´

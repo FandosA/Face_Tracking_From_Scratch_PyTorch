@@ -27,9 +27,6 @@ if __name__ == "__main__":
         with open(os.path.join(images_path, image), 'r') as f:
             label = json.load(f)
         
-        if label['class'] == 0:
-            continue
-        
         img = cv2.imread(os.path.join('aug_data', 'images',
                                       image.split('.')[0] + '.' + image.split('.')[1] + '.jpg'))
         

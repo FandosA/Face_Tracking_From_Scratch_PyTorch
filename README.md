@@ -47,3 +47,9 @@ Finally, you can test the model by running any of the test files: ```test_images
 
 ### test_images.py
 With this file it is possible to test the model with other images. The parameters to set here are the path to the folder containing the images we want to use to test the model, the name of the folder set in the _train.py_ script to store the checkpoints, the checkpoint you want to use to test the model, the device to run the model (_'gpu'_ or _'cpu'_) and the accuracy threshold to determine if there is a face in the test image or not and thus draw the bounding box if so. Images will be displayed continuously until finished.
+
+### test_real_time_camera.py
+With this file it is possible to test the model with the camera. The parameters to set here are the name of the folder set in the _train.py_ script to store the checkpoints, the checkpoint you want to use to test the model, the device to run the model (_'gpu'_ or _'cpu'_) and the accuracy threshold to determine if there is a face in the test image or not and thus draw the bounding box if so. The images captured by the camera will be displayed in real time drawing the bounding box when a face is detected.
+
+### test_real_time_video.py
+With this file it is possible to test the model with a video. The parameters to set here are the path to the folder containing the images we want to use to test the model, the path to the video, the name of the folder set in the _train.py_ script to store the checkpoints, the checkpoint you want to use to test the model, the device to run the model (_'gpu'_ or _'cpu'_) and the accuracy threshold to determine if there is a face in the test image or not and thus draw the bounding box if so. The video will be displayed in real time drawing the bounding box when a face is detected.

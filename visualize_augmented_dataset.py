@@ -39,8 +39,8 @@ if __name__ == "__main__":
         coords[3] = label["bbox"][3]
         
         cv2.rectangle(img=img,
-                      pt1=tuple(np.multiply(np.array(coords[:2]), [256, 144]).astype(int)),
-                      pt2=tuple(np.multiply(np.array(coords[2:]), [256, 144]).astype(int)),
+                      pt1=tuple(np.multiply(np.array(coords[:2]), [img.shape[1], img.shape[0]]).astype(int)),
+                      pt2=tuple(np.multiply(np.array(coords[2:]), [img.shape[1], img.shape[0]]).astype(int)),
                       color=(0, 0, 255),
                       thickness=2)
     

@@ -24,4 +24,4 @@ To do the data augmentation, just run the ```data_augmentation.py``` script. For
 ```
 python data_augmentation.py --width=<width> --height=<height>
 ```
-Also the labels for those new images will be automatically created, and everything will be stored in the ```aug_data/``` folder. To check that the data augmentation has been succesful, run the ```visualize_augmented_dataset.py``` and the new images will be shown with the rectangles around the faces.
+The labels for those new images will be created automatically, setting the label to 1 or 0 depending on whether there is a face in the images or not, respectively, and converting the coordinates of the bounding boxes to the corresponding values. Images will be stored in the ```aug_data/images``` folder and labels will stored in the ```aug_data/labels``` folder. To check that the data augmentation has been succesful, running ```visualize_augmented_dataset.py``` should display the new images with the bounding boxes around the faces.

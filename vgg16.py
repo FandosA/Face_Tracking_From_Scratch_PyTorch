@@ -4,7 +4,7 @@ Created on Sat Nov  12 17:04:37 2022
 
 @author: Andres Fandos
 
-Convolutional neural networks
+Convolutional neural network
 """
 
 import torch.nn as nn    

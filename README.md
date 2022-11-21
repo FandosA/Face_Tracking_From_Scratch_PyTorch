@@ -28,7 +28,10 @@ The labels for those new images will be created automatically, setting the label
 
 ## Train the model
 To train the model, the convolutional neural network VGG16 has been used. If you followed the steps correctly, it should be enough to run the ```train.py``` script to start the training. The hyperparameters can be modified both setting them in the script or in the command line, and they are:
-- ```dataset_path```: path to the fodler that contains the images and the labels. In our case '_aug_data_'.
+- ```dataset_path```: path to the fodler that contains the images and the labels. In our case _'aug_data'_.
 - ```train_split```: percentage of the dataset to use for training.
-- ```log_dir```: directory to store the checkpoints and loss values of the current training.
-```
+- ```log_dir```: name of the folder that will be created to store the checkpoints and the loss values of the current training.
+- ```batch_size```: batch size.
+- ```learning_rate```: learning rate.
+- ```epochs```: number of epochs.
+- ```device```: device in which to run the training (_'gpu'_ or _'cpu'_)

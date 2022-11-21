@@ -75,6 +75,10 @@ if __name__ == "__main__":
             
         if label_pred.item() > opt.accuracy:
             
+            cv2.putText(frame, 'Face',
+                        tuple(np.multiply(np.array(coords[:2]), [frame.shape[1], frame.shape[0]]).astype(int)),
+                        cv2.FONT_HERSHEY_PLAIN, 3, (0, 0, 255), 2)
+            
             cv2.rectangle(img=frame,
                           pt1=tuple(np.multiply(np.array(coords[:2]), [frame.shape[1], frame.shape[0]]).astype(int)),
                           pt2=tuple(np.multiply(np.array(coords[2:]), [frame.shape[1], frame.shape[0]]).astype(int)),

@@ -24,11 +24,12 @@ def plot_prediction():
     coords[2] = bbox_coords_pred[0][2].item()
     coords[3] = bbox_coords_pred[0][3].item()
 
-    cv2.rectangle(img=image,
-                  pt1=tuple(np.multiply(np.array(coords[:2]), [image.shape[1], image.shape[0]]).astype(int)),
-                  pt2=tuple(np.multiply(np.array(coords[2:]), [image.shape[1], image.shape[0]]).astype(int)),
-                  color=(0, 0, 255),
-                  thickness=2)
+    if label_pred.item() > opt.accuracy:
+        cv2.rectangle(img=image,
+                      pt1=tuple(np.multiply(np.array(coords[:2]), [image.shape[1], image.shape[0]]).astype(int)),
+                      pt2=tuple(np.multiply(np.array(coords[2:]), [image.shape[1], image.shape[0]]).astype(int)),
+                      color=(0, 0, 255),
+                      thickness=2)
 
     cv2.imshow('Image', image)
     cv2.waitKey(2000)
@@ -85,5 +86,4 @@ if __name__ == '__main__':
         # Predict if there's face in the image and their bounding box coordinates 
         bbox_coords_pred, label_pred = model(image_tensor)
         
-        if label_pred.item() > opt.accuracy:
-            plot_prediction()
+        plot_prediction()

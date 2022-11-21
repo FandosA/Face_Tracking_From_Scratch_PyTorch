@@ -17,11 +17,11 @@ The resized images will be stored in the ```data/images_resized``` folder.
 
 The next step is to label those images. For that, the tool _Labelme_ will be used. Follow the tutorial mentioned above, starting at 20:05, to install the tool and label the images. Just note that when you click the _Open Dir_ option in the tool, the input directory in our case is ```data/images_resized```, and the output directory for the labels is ```data/labels```.
 
-If the labeling process was successful, running ```visualize_dataset.py``` should display the dataset with the rectangles around the faces in the images.
+If the labeling process was successful, running ```visualize_dataset.py``` should display the dataset with the bounding boxes around the faces in the images.
 
 ## Data augmentation
 To do the data augmentation, just run the ```data_augmentation.py``` script. For each image, using the library _albumentations_, one hundred images will be created taking subimages from the original image changing properties such as rotation, orientation, color, brightness... The resolution of these new images, i.e. their size, is set by deafutlt to 256x144. It can be changed by running the following command, but keep in mind that if this size is modified, the neural network and test files will also have to be modified, so it is not recommended.
 ```
 python data_augmentation.py --width=<width> --height=<height>
 ```
-The labels for those new images will be created automatically, setting the label to 1 or 0 depending on whether there is a face in the images or not, respectively, and converting the coordinates of the bounding boxes to the corresponding values. Images will be stored in the ```aug_data/images``` folder and labels will stored in the ```aug_data/labels``` folder. To check that the data augmentation has been succesful, running ```visualize_augmented_dataset.py``` should display the new images with the bounding boxes around the faces.
+The labels for those new images will be created automatically, setting the label to 1 or 0 depending on whether there is a face in the images or not, respectively, and converting the coordinates of the bounding boxes to the corresponding values. Images will be stored in the ```aug_data/images``` folder and labels will be stored in the ```aug_data/labels``` folder. To check that the data augmentation has been succesful, running ```visualize_augmented_dataset.py``` should display the new images with the bounding boxes around the faces.

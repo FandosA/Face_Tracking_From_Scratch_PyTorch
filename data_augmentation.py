@@ -14,12 +14,18 @@ import os
 import cv2
 import json
 import numpy as np
+import configargparse
 import albumentations as alb
 
 
 if __name__ == "__main__":
     
-    augmentor = alb.Compose([alb.RandomCrop(width=256, height=144), 
+    p = configargparse.ArgumentParser()
+    p.add_argument('--width', type=int, default=256, help='Width of the subimage')
+    p.add_argument('--height', type=int, default=144, help='Width of the subimage')
+    opt = p.parse_args()
+    
+    augmentor = alb.Compose([alb.RandomCrop(width=opt.width, height=opt.height), 
                              alb.HorizontalFlip(p=0.5), 
                              alb.RandomBrightnessContrast(p=0.2),
                              alb.RandomGamma(p=0.2), 

@@ -5,7 +5,7 @@ IMPORTANT: The model is designed to detect and track images/videos with a single
 
 
 ## Dataset preparation
-To prepare the dataset you can use your own images (as I did) or you can connect a camera to the PC and run the ```capture_images_camera.py``` script to capture images. This script will capture and store the desired number of images. If you choose the first option just put the images in the ```data/images``` folder, otherwise try to take images from different points of view moving your head and face. The script is programmed so that images are taken every 0.5 seconds, and they will be stored automatically in the folder. To set the number of images to take, you can change the default value in the script or open a terminal and run the next command:
+To prepare the dataset you can use your own images (as I did) or you can connect a camera to the PC and run the ```capture_images_camera.py``` script to capture images. This script will capture and store the desired number of images (by default 100). If you choose the first option just put the images in the ```data/images``` folder, otherwise try to take images from different points of view moving your head and face. The script is programmed so that images are taken every 0.5 seconds, and they will be stored automatically in the folder. To set the number of images to take, you can change the default value in the script or open a terminal and run the next command:
 ```
 python capture_images_camera.py --images_to_take=<number of images>
 ```

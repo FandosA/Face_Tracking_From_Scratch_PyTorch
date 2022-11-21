@@ -25,9 +25,6 @@ if __name__ == "__main__":
     
     if not cap.isOpened():
         raise Exception("Could not open video device")
-        
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 360)
     
     for imgnum in range(opt.images_to_take):
         

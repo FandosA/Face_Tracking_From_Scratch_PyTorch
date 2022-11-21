@@ -55,34 +55,6 @@ def save_loss_acc(log_dir, train_accuracies, val_accuracies, train_losses, val_l
     np.savetxt(os.path.join(log_dir, 'train_losses.txt'), train_losses)
     np.savetxt(os.path.join(log_dir, 'val_losses.txt'), val_losses)
 
-
-def visualize_dataset(dataset):
-    
-    for i in range(len(dataset)):
-        
-        if dataset[i][2].item() == 0.0:
-            continue
-        
-        img = dataset[i][0].cpu().detach().numpy()
-        img = np.transpose(img, (1, 2, 0))
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        coords = dataset[i][1].cpu().detach().numpy()
-        
-        cv2.rectangle(img=img,
-                      pt1=tuple(np.multiply(coords[:2], [320, 180]).astype(int)),
-                      pt2=tuple(np.multiply(coords[2:], [320, 180]).astype(int)),
-                      color=(0, 0, 255),
-                      thickness=2)
-        
-        cv2.imshow('Image', img)
-        
-        key = cv2.waitKey(2000)
-        
-        if key == 27:
-            break
-        
-    cv2.destroyAllWindows()
-
     
 def plot_loss(log_dir, train_losses, validation_losses, train_accs, validation_accs):
     

@@ -41,4 +41,5 @@ As an example, I uploaded the folder where the checkpoints of the model I traine
 **IMPORTANT**: the files inside the ```checkpoints/``` folder are not actual checkpoints. They are empty files created to show the appearance of the folder that will be created when starting the training. On the other hand, the plot and the accuracy and loss values are the actual results that I got from training my model.
 
 ## Test the model
-Finally, you can test the model by running any of the test files: ``````
+Finally, you can test the model by running any of the test files: ```test_images.py```, ```test_real_time_camera.py.py``` or ```test_real_time_video.py```.
+

@@ -28,6 +28,6 @@ The labels for those new images will be created automatically, setting the label
 
 ## Train the model
 To train the model, the convolutional neural network VGG16 has been used. If you followed the steps correctly, it should be enough to run the ```train.py``` script to start the training. The hyperparameters can be modified both setting them in the script or running the following command:
-´´´
+```
 python train.py --dataset_path=<path to the dataset> --train_split=<percentage of the dataset to use for training> --log_dir=<directory to store checkpoints> --
-´´´
+```

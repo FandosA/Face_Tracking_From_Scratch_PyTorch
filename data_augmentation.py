@@ -23,6 +23,7 @@ if __name__ == "__main__":
     p = configargparse.ArgumentParser()
     p.add_argument('--width', type=int, default=256, help='Width of the subimage')
     p.add_argument('--height', type=int, default=144, help='Width of the subimage')
+    p.add_argument('--num_subimages', type=int, default=100, help='Number of subimages to take')
     opt = p.parse_args()
     
     augmentor = alb.Compose([alb.RandomCrop(width=opt.width, height=opt.height), 
@@ -78,7 +79,7 @@ if __name__ == "__main__":
             
         try:
             
-            for x in range(100):
+            for x in range(opt.num_subimages):
                 
                 augmented = augmentor(image=img, bboxes=[coords], class_labels=['face'])
                 cv2.imwrite(os.path.join('aug_data',

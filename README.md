@@ -34,4 +34,5 @@ To train the model, the convolutional neural network VGG16 has been used. If you
 - ```batch_size```: batch size.
 - ```learning_rate```: learning rate.
 - ```epochs```: number of epochs.
-- ```device```: device in which to run the training (_'gpu'_ or _'cpu'_)
+- ```device```: device to run the training (_'gpu'_ or _'cpu'_).
+

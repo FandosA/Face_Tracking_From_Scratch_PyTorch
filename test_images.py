@@ -19,12 +19,12 @@ from torchvision.transforms import transforms
 
 def plot_prediction():
     
-    coords[0] = bbox_coords_pred[0][0].item()
-    coords[1] = bbox_coords_pred[0][1].item()
-    coords[2] = bbox_coords_pred[0][2].item()
-    coords[3] = bbox_coords_pred[0][3].item()
-
     if label_pred.item() > opt.accuracy:
+        
+        coords[0] = bbox_coords_pred[0][0].item()
+        coords[1] = bbox_coords_pred[0][1].item()
+        coords[2] = bbox_coords_pred[0][2].item()
+        coords[3] = bbox_coords_pred[0][3].item()
         
         cv2.putText(image, 'Face',
                     tuple(np.multiply(np.array(coords[:2]), [image.shape[1], image.shape[0]]).astype(int)),

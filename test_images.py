@@ -25,6 +25,11 @@ def plot_prediction():
     coords[3] = bbox_coords_pred[0][3].item()
 
     if label_pred.item() > opt.accuracy:
+        
+        cv2.putText(image, 'Face',
+                    tuple(np.multiply(np.array(coords[:2]), [image.shape[1], image.shape[0]]).astype(int)),
+                    cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255), 2)
+        
         cv2.rectangle(img=image,
                       pt1=tuple(np.multiply(np.array(coords[:2]), [image.shape[1], image.shape[0]]).astype(int)),
                       pt2=tuple(np.multiply(np.array(coords[2:]), [image.shape[1], image.shape[0]]).astype(int)),

@@ -187,7 +187,7 @@ if __name__ == "__main__":
     # Select parameters for training
     p = configargparse.ArgumentParser()
     p.add_argument('--dataset_path', type=str, default='aug_data', help='Dataset path.')
-    p.add_argument('--train_split', type=float, default=0.8, help='Percentage of the dataset to use for training.')
+    p.add_argument('--train_split', type=float, default=0.85, help='Percentage of the dataset to use for training.')
     p.add_argument('--log_dir', type=str, default='face_tracking_model', help='Name of the folder to save the model.')
     p.add_argument('--batch_size', type=int, default=8, help='Batch size.')
     p.add_argument('--learning_rate', type=float, default=1e-4, help='Learning rate.')

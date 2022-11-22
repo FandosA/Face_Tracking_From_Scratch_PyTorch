@@ -22,7 +22,7 @@ if __name__ == "__main__":
     p = configargparse.ArgumentParser()
     p.add_argument('--log_dir', type=str, default='face_tracking_model', help='Name of the folder to load the model')
     p.add_argument('--checkpoint', type=str, default='checkpoint_43_best.pth', help='Checkpoint')
-    p.add_argument('--accuracy', type=float, default=0.8, help='Accuracy threshold')
+    p.add_argument('--accuracy', type=float, default=0.9, help='Accuracy threshold')
     p.add_argument('--device', type=str, default='gpu', help='Choose the device: "gpu" or "cpu"')
     opt = p.parse_args()
     
@@ -60,7 +60,6 @@ if __name__ == "__main__":
     while cap.isOpened():
         
         ret, frame = cap.read()
-        print(frame.shape)
         img_resized = cv2.resize(frame, (256, 144))
         image_tensor = transformer(img_resized)
         image_tensor = image_tensor.to(device)

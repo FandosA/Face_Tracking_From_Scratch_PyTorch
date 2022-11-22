@@ -56,3 +56,5 @@ With this file it is possible to test the model with a video. The parameters to 
 
 ## Results
 In this video I show the results testing the model after training it with 32,200 images, 222 with a face and 100 without a face. 322 images that became 32,200 after data augmentation.
+
+I hope you found this repository interesting and helpful to understand how to track a face (or any object, depending on which images you use to train the model) in images, video or the camera.

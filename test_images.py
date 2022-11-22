@@ -4,7 +4,7 @@ Created on Mon Nov 14 19:23:32 2022
 
 @author: Andres Fandos
 
-Script to test the model trained with the test dataset
+Script to test the model trained with images
 """
 
 import os

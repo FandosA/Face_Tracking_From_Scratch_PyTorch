@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # Select parameters for training
     p = configargparse.ArgumentParser()
     p.add_argument('--log_dir', type=str, default='face_tracking_model', help='Name of the folder to load the model')
-    p.add_argument('--checkpoint', type=str, default='checkpoint_42_best.pth', help='Checkpoint')
+    p.add_argument('--checkpoint', type=str, default='checkpoint_43_best.pth', help='Checkpoint')
     p.add_argument('--accuracy', type=float, default=0.8, help='Accuracy threshold')
     p.add_argument('--device', type=str, default='gpu', help='Choose the device: "gpu" or "cpu"')
     opt = p.parse_args()

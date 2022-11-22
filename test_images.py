@@ -45,7 +45,7 @@ if __name__ == '__main__':
     
     # Select parameters for training
     p = configargparse.ArgumentParser()
-    p.add_argument('--dataset_test_path', type=str, default='data/images', help='Dataset path')
+    p.add_argument('--dataset_test_path', type=str, default='data/images_resized', help='Dataset path')
     p.add_argument('--log_dir', type=str, default='face_tracking_model', help='Name of the folder to load the model')
     p.add_argument('--checkpoint', type=str, default='checkpoint_43_best.pth', help='Checkpoint path')
     p.add_argument('--accuracy', type=float, default=0.75, help='Accuracy threshold')

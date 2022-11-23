@@ -23,7 +23,7 @@ if __name__ == "__main__":
     p.add_argument('--log_dir', type=str, default='face_tracking_model', help='Name of the folder to load the model')
     p.add_argument('--path_to_video', type=str, default='videos/video.mp4', help='Path to the video')
     p.add_argument('--checkpoint', type=str, default='checkpoint_43_best.pth',help='Checkpoint')
-    p.add_argument('--accuracy', type=float, default=0.9, help='Accuracy threshold')
+    p.add_argument('--accuracy', type=float, default=0.94, help='Accuracy threshold')
     p.add_argument('--device', type=str, default='gpu', help='Choose the device: "gpu" or "cpu"')
     opt = p.parse_args()
     

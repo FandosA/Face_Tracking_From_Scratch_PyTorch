@@ -41,8 +41,6 @@ As an example, I uploaded the folder where the checkpoints of the model I traine
 
 **IMPORTANT**: the files inside the ```checkpoints/``` folder are not actual checkpoints. They are empty files created to show the appearance of the folder that will be created when starting the training. On the other hand, the plot and the accuracy and loss values are the actual results that I got from training my model.
 
-### Loss function
-
 ## Test the model
 Finally, you can test the model by running any of the test files: ```test_images.py```, ```test_real_time_camera.py``` or ```test_real_time_video.py```.
 
@@ -59,3 +57,5 @@ With this file it is possible to test the model with a video. The parameters to 
 In this video I show the results testing the model after training it with 32,200 images, 222 with a face and 100 without a face. 322 images that became 32,200 after data augmentation.
 
 I hope you found this repository interesting and helpful in understanding how to track a face (or any other object, depending on the images you use to train the model) in images, video, or the camera.
+
+Video: https://www.youtube.com/watch?v=m9huHfmKfKo&t=9s

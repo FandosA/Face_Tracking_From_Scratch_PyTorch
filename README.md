@@ -21,7 +21,7 @@ If the labeling process was successful, running ```visualize_dataset.py``` shoul
 
 
 ## Data augmentation
-To do the data augmentation, just run the ```data_augmentation.py``` script. For each image, using the library _albumentations_, one hundred images will be created taking subimages from the original image changing properties such as rotation, orientation, color, brightness... The resolution of these new images, i.e. their size, is set by deafutlt to 256x144. It can be changed by running the following command, but keep in mind that if this size is modified, the neural network and test files will also have to be modified, so it is not recommended. The number of subimages to take can be modified to (see the command).
+To do the data augmentation, just run the ```data_augmentation.py``` script. For each image, using the library _albumentations_, one hundred images will be created taking subimages from the original image changing properties such as rotation, orientation, color, brightness... The resolution of these new images, i.e. their size, is set by default to 256x144. It can be changed by running the following command, but keep in mind that if this size is modified, the neural network and test files will also have to be modified, so it is not recommended. The number of subimages to take can be modified too (see the command).
 ```
 python data_augmentation.py --width=<width> --height=<height> --num_subimages=<number of subimages>
 ```

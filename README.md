@@ -58,4 +58,4 @@ In this video I show the results testing the model after training it with 32,200
 
 I hope you found this repository interesting and helpful in understanding how to track a face (or any other object, depending on the images you use to train the model) in images, video, or the camera.
 
-Video: https://www.youtube.com/watch?v=m9huHfmKfKo&t=9s
+Video: https://www.youtube.com/watch?v=m9huHfmKfKo

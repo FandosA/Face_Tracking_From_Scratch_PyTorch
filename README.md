@@ -1,4 +1,4 @@
-# Face Tracking In Real Time
+# Face Tracking In Real Time From Scratch
 Implementation of a deep learning model based on the VGG16 neural network to track faces on video or with a camera in real time. This proyect has been done following [this](https://www.youtube.com/watch?v=N_W4EYtsa10&t=6473s) tutorial, in which [Nicholas Renotte](https://www.youtube.com/@NicholasRenotte) implemented a model using the Tensorflow framework, and I took it to deploy and port it to PyTorch. To run the implementation, download this repository and run the ```setup.py``` script. It will create the necessary folders to prepare the dataset.
 
 **IMPORTANT**: The model is designed to detect and track faces in images/videos with a single face, so, in your dataset, put images with only one face. Also, the dataset I used was made with images in landscape orientation (e.g. 1280x720, 640x360). Finally, make sure your images are in _jpg_ format.

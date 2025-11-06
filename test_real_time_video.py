@@ -88,9 +88,9 @@ if __name__ == "__main__":
         cv2.imshow("Frame", frame)  
         key = cv2.waitKey(15)
 
-        # Si se presiona la tecla ESC se sale del bucle
         if key == 27:
             break
         
     cap.release()
     cv2.destroyAllWindows()
+
